@@ -1,17 +1,30 @@
-document.addEventListener("keyup", e=>{
+document.addEventListener("keyup", e => {
+  if (e.target.matches("#buscador")) {
+      if (e.key === "Escape") e.target.value = "";
 
-    if (e.target.matches("#buscador")){
-  
-        if (e.key ==="Escape")e.target.value = ""
-  
-        document.querySelectorAll(".articulo").forEach(fruta =>{
-  
-            fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-              ?fruta.classList.remove("filtro")
-              :fruta.classList.add("filtro")
-        })
-  
-    }
-  
-  
-  })
+      const articulos = Array.from(document.querySelectorAll(".articulo"));
+      let encontrado = false;
+
+      articulos.forEach(fruta => {
+          const texto = fruta.textContent.toLowerCase();
+          if (texto.includes(e.target.value.toLowerCase())) {
+              fruta.classList.remove("filtro");
+              encontrado = true; // Se encontró al menos un artículo
+          } else {
+              fruta.classList.add("filtro");
+          }
+      });
+
+      // Si se presiona Enter y se encontró un artículo
+      if (e.key === "Enter" && encontrado) {
+          const articuloSeleccionado = articulos.find(fruta => 
+              fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+          );
+
+          if (articuloSeleccionado) {
+              const enlace = articuloSeleccionado.parentElement.href; // Obtener el enlace del padre <a>
+              window.location.href = enlace; // Redirigir a la página
+          }
+      }
+  }
+});
