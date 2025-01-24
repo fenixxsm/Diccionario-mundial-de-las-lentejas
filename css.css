@@ -33,6 +33,7 @@ input{
     position: fixed;
     margin-top: 20px;
     
+    
 }
 .arriba{
     align-items: start;
@@ -61,20 +62,28 @@ a{
 *{
     overflow: hidden;
 }
-h1,h2,h3,h4,h5,h6,p,li,input{
+h1,h2,h3,h4,h5,h6,p,input{
     font-family: abhaya libre;
     font-weight: 700;
     line-height: 1.25;
     color: #212529;
 }
-nav{
-    display: flex;
-    align-items:center;
-    width: 100%;
-    padding: 50px 20px;
-    position: fixed;
-    background-color: #212529;
+li{
+    color: transparent;
 }
-.margin{
-    margin-top: 200px;
+
+td{
+    align-items: start;
+}
+
+
+.icon{
+    width: 100px;
+}
+.nose{
+    width: 800px;
+    height: 800px;
+}
+tr{
+   border-color: transparent;
 }
