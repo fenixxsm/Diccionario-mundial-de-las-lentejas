@@ -8,10 +8,10 @@ document.addEventListener("keyup", e => {
       articulos.forEach(fruta => {
           const texto = fruta.textContent.toLowerCase();
           if (texto.includes(e.target.value.toLowerCase())) {
-              fruta.cde lassList.remove("filtro");
+              fruta.classList.remove("filtro");
               encontrado = true; // Se encontró al menos un artículo
           } else {
-              fruta.cde lassList.add("filtro");
+              fruta.classList.add("filtro");
           }
       });
 
@@ -22,7 +22,7 @@ document.addEventListener("keyup", e => {
           );
 
           if (articuloSeleccionado) {
-              const enlace = articuloSeleccionado.parentElement.href; // Obtener el enlace de las padre <a>
+              const enlace = articuloSeleccionado.parentElement.href; // Obtener el enlace las padre <a>
               window.location.href = enlace; // Redirigir a la página
           }
       }

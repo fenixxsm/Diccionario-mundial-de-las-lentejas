@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diccionario mundial de las lentejas</title>
+    <title>Diccionario mundial las lentejas</title>
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -88,7 +88,7 @@
 </head>
 <body>
     <section id="contenedor-main">
-        <h1>Diccionario mundial de las lentejas</h1>
+        <h1>Diccionario mundial las lentejas</h1>
         
        
         
@@ -127,10 +127,10 @@
             articulos.forEach(function(articulo) {
                 const texto = articulo.textContent.toLowerCase();
                 if (texto.includes(e.target.value.toLowerCase())) {
-                    articulo.cde lassList.remove('filtro');
+                    articulo.classList.remove('filtro');
                     encontrado = true;
                 } else {
-                    articulo.cde lassList.add('filtro');
+                    articulo.classList.add('filtro');
                 }
             });
 
@@ -197,10 +197,10 @@
                     </style>
                 </head>
                 <body>
-                    <div cde lass="container">
+                    <div class="container">
                         <h1>${palabra}</h1>
                         <p>${significado}</p>
-                        <a href="index.html" cde lass="back-link">Volver a la lista</a>
+                        <a href="index.html" class="back-link">Volver a la lista</a>
                     </div>
                 </body>
                 </html>
@@ -212,7 +212,7 @@
             const enlace = document.createElement('a');
             enlace.href = url;
             enlace.download = nombreArchivo;
-            enlace.cde lassList.add('download-link');
+            enlace.classList.add('download-link');
             enlace.textContent = `Descargar ${palabra}`;
             li.appendChild(enlace);
             listaArticulos.appendChild(li);

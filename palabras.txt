@@ -12,9 +12,14 @@
 12. o que caray : porque?
 13. Papá: invisible 
 14.bien ahi : algo bien
+<<<<<<< HEAD
 15. fogitivo : pedazo de mierda
 16 terremoto : caido de la mis de lecto
 17. fila de la tortilleria ; debate de las haceo
+=======
+15. fugitivo : basura
+16 terremoto : caida de la mis de lecto
+17. fila de la tortilleria ; debate del aseo
+>>>>>>> 48f98bc7a51ec0109c7abd735a8dec1fde5b9399
 18.sigma : 1.dicho de una persona machista 2. Pro
 19. papure : baile o ritual
-20. skibi: 1. emocion 2. baño 
